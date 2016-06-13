@@ -1,0 +1,19 @@
+{
+  "name": "TRC-Calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Neuralink It Solutions Inc.",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-packager": "^7.0.2",
+    "electron-prebuilt": "^1.2.0",
+    "gulp-connect-php": "0.0.7"
+  },
+  "dependencies": {
+    "electron-osx-sign": "^0.4.0-beta4"
+  }
+}

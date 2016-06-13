@@ -1,0 +1,198 @@
+<?php
+
+$calc = ($_REQUEST['calc'])?$_REQUEST['calc']:'enough-retire';
+
+?>
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>TrulyRichClub Calculators</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><img src="img/trc-nav-logo.png"></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#" onclick="trcLogin()"><i class="fa fa-sign-in"></i> Member's Login</a></li>
+			</ul>
+			    <script>
+	                function trcLogin() {
+	                    var shell = require('electron').shell;
+	                 event.preventDefault();
+	                  shell.openExternal('http://bosanchezmembers.com/membersonly/');
+	                }
+                </script>
+		</div><!-- /.navbar-collapse -->
+	</div>
+	</nav>
+	<!-- end nav -->
+<div class="clearfix">&nbsp;</div>
+<div class="container">
+	<div class="row">
+  <!-- <header>Truly Rich Club </header> -->
+	<div class="col-sm-4 col-md-3 sidebar">
+		<h1 class="bsm-badge" style="margin-top:0px !important;">Calculators</h1>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">
+							<a>Auto</a>
+						</h5>
+					</div>
+					<div class="panel-collapse">
+						<div class="panel-body">
+							<a href="javascript:showonlyone('newboxes1');" id="myHeader1">Auto Loan Payment</a><br>
+				      <a href="javascript:showonlyone('newboxes2');" id="myHeader2">How Much Car Can You Afford?</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">
+							<a>Budget &amp; Goals</a>
+						</h5>
+					</div>
+					<div class="panel-collapse">
+						<div class="panel-body">
+							<a href="javascript:showonlyone('newboxes2');" id="myHeader2">How Much Car Can You Afford?</a><br>
+		        	<a href="javascript:showonlyone('newboxes3');" id="myHeader3">How Much House Can You Afford?</a><br>
+		        	<a href="javascript:showonlyone('newboxes4');" id="myHeader4">How Much Will College Cost?</a><br>
+		        	<a href="javascript:showonlyone('newboxes5');" id="myHeader5">Retirement Fund</a><br>
+		        	<a href="javascript:showonlyone('newboxes6');" id="myHeader6">Pay Down Debt Or Invest?</a><br>
+		        	<a href="javascript:showonlyone('newboxes7');" id="myHeader7">Rework Your Budget</a><br>
+		        	<a href="javascript:showonlyone('newboxes8');" id="myHeader8">Save A Million</a><br>
+		        	<a href="javascript:showonlyone('newboxes9');" id="myHeader9">Saving for a Goal</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a>Career &amp; Retirement</a>
+						</h4>
+					</div>
+					<div class="panel-collapse">
+						<div class="panel-body">
+							<a href="javascript:showonlyone('newboxes10');" id="myHeader10">How Much Will My Savings Grow?</a><br>
+		        	<a href="javascript:showonlyone('newboxes11');" id="myHeader11">Inflation Impact On Retirement</a><br>
+		        	<a href="javascript:showonlyone('newboxes5');" id="myHeader5">Retirement Fund</a><br>
+		        	<a href="javascript:showonlyone('newboxes7');" id="myHeader7">Rework Your Budget</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a>Housing</a>
+						</h4>
+					</div>
+					<div class="panel-collapse">
+						<div class="panel-body">
+							<a href="javascript:showonlyone('newboxes12');" id="myHeader12">How Much House Can You Afford?</a><br>
+							<a href="javascript:showonlyone('newboxes13');" id="myHeader13">Mortgage Payments</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	  </div>
+
+
+
+		<div class="col-sm-8 col-md-9 main">
+  		<article class="content">
+    		<!-- <h1 style="margin-top:0px !important;">Calculators</h1> -->
+    		<section>
+					<script>window.$ = window.jQuery = require('jquery');</script>
+					<script type="text/javascript" src="js/boot.js"></script>
+					<div class="newboxes" id="newboxes1" style="display:block;">
+						<script type="text/javascript">_calc_boot("calcs", "auto-payment");</script>
+					</div>
+					<div class="newboxes" id="newboxes2">
+						<script type="text/javascript">_calc_boot("calcs", "auto-loan");</script>
+					</div>
+					<div class="newboxes" id="newboxes3">
+						<script type="text/javascript">_calc_boot("calcs", "house-afford");</script>
+					</div>
+					<div class="newboxes" id="newboxes4">
+						<script type="text/javascript">_calc_boot("calcs", "college-cost");</script>
+					</div>
+					<div class="newboxes" id="newboxes5">
+						<script type="text/javascript">_calc_boot("calcs", "enough-retire");</script>
+					</div>
+					<div class="newboxes" id="newboxes6">
+						<script type="text/javascript">_calc_boot("calcs", "debt-invest");</script>
+					</div>
+					<div class="newboxes" id="newboxes7">
+						<script type="text/javascript">_calc_boot("calcs", "rework-budget");</script>
+					</div>
+					<div class="newboxes" id="newboxes8">
+						<script type="text/javascript">_calc_boot("calcs", "save-million");</script>
+					</div>
+					<div class="newboxes" id="newboxes9">
+						<script type="text/javascript">_calc_boot("calcs", "allow-save");</script>
+					</div>
+					<div class="newboxes" id="newboxes10">
+						<script type="text/javascript">_calc_boot("calcs", "savings-grow");</script>
+					</div>
+					<div class="newboxes" id="newboxes11">
+						<script type="text/javascript">_calc_boot("calcs", "retirement-inflation");</script>
+					</div>
+					<div class="newboxes" id="newboxes12">
+						<script type="text/javascript">_calc_boot("calcs", "house-afford");</script>
+					</div>
+					<div class="newboxes" id="newboxes13">
+						<script type="text/javascript">_calc_boot("calcs", "mortgage-payment");</script>
+					</div>
+    		</section>
+  		<!-- end .content -->
+			<div class="clearfix">&nbsp;</div>
+			</article>
+		</div>
+  <!-- end .container -->
+</div>
+</div>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function showonlyone(thechosenone) {
+     $('.newboxes').each(function(index) {
+          if ($(this).attr("id") == thechosenone) {
+               $(this).show(200);
+          }
+          else {
+               $(this).hide(600);
+          }
+     });
+}
+</script>
+<footer>
+	<div class="container">
+	<div class="row">
+				<div class="col-md-12">
+					<p class="text-center" style="margin-bottom:0px;font-size:12px;">Copyright © Bo Sanchez Inc. 2014</p>
+				</div>
+			</div>
+		</div>
+</footer>
+</body>
+</html>
